@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encontre os Bebês</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <main class="tela-jogo">
+    <aside class="painel-audio" aria-label="Controles de som">
+      <button type="button" id="alternarMusica" aria-pressed="true">♫ Música ligada</button>
+      <button type="button" id="alternarEfeitos" aria-pressed="true">♪ Efeitos ligados</button>
+      <label for="volumeAudio">Volume da música</label>
+      <input id="volumeAudio" type="range" min="0" max="35" value="16" aria-label="Volume da música">
+    </aside>
+
+    <header class="cabecalho-jogo">
+      <div class="icone-jogo">🍼</div>
+
+      <h1>Encontre os Bebês!</h1>
+
+      <p>A Guardiã escondeu os 3 bebês!</p>
+      <p>Encontre todos antes que suas tentativas acabem.</p>
+    </header>
+
+    <section class="informacoes-jogo" aria-label="Progresso do jogo">
+      <div class="info">
+        <span>👶 Bebês encontrados</span>
+        <strong id="bebesEncontrados">0 / 3</strong>
+      </div>
+
+      <div class="info">
+        <span>🎯 Tentativas</span>
+        <strong id="tentativas">5</strong>
+      </div>
+    </section>
+
+    <section
+      class="campo-jogo"
+      id="campoJogo"
+      aria-label="Campo com 25 quadrados"
+    >
+    </section>
+
+    <section class="mensagem-jogo" aria-live="polite">
+      <p id="mensagemJogo">
+        Escolha um quadrado e tente encontrar um bebê! 👶
+      </p>
+    </section>
+
+    <button id="btnReiniciar" class="botao-reiniciar" hidden>
+      🔄 Jogar novamente
+    </button>
+
+    <section id="telaVitoria" class="tela-vitoria" hidden>
+      <div class="conteudo-vitoria">
+        <div class="ilustracao-vitoria" aria-label="Bebês comemorando">
+          <img src="/images/bebe-azul.svg" alt="Bebê vestido de azul">
+          <img src="/images/bebe-rosa.svg" alt="Bebê vestido de rosa">
+        </div>
+
+        <h2>Vocês conseguiram!</h2>
+
+        <p>Os 3 bebês foram encontrados!</p>
+        <p>A Guardiã perdeu o segredo!</p>
+
+        <button id="btnRevelacao" class="botao-revelacao">
+          Descobrir o grande segredo
+        </button>
+      </div>
+    </section>
+
+    <section id="telaRevelacao" class="tela-revelacao" hidden>
+      <div class="conteudo-revelacao">
+        <div id="contador" class="contador">3</div>
+
+        <div id="resultado" class="resultado" hidden>
+          <div id="confetes" aria-hidden="true">🎉 ✨ 🎊 ✨ 🎉</div>
+
+          <div id="emojiBebe" class="emoji-bebe-revelacao">👶</div>
+
+          <h2 id="tituloRevelacao">É...</h2>
+
+          <p id="nomeBebeRevelacao"></p>
+
+          <button
+            id="btnInicioRevelacao"
+            class="botao-inicio-revelacao"
+          >
+            🏠 Voltar ao início
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/js/jogo.js"></script>
+</body>
+</html>

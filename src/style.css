@@ -1,0 +1,1154 @@
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #f8f1e7;
+  font-synthesis: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #7251a5;
+  outline-offset: 3px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.descricao {
+  color: #666;
+  line-height: 1.6;
+  margin: 15px 0 25px;
+}
+
+.introducao {
+  color: #666;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+
+/* =========================
+   BOTÕES GERAIS
+========================= */
+
+.botao {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.botao:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   PÁGINA INICIAL
+========================= */
+
+.tela-inicial {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f1e7, #e8eef5);
+}
+
+.conteudo {
+  width: 100%;
+  max-width: 500px;
+  padding: 45px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.icone-bebe {
+  font-size: 75px;
+  margin-bottom: 15px;
+}
+
+.conteudo h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.subtitulo {
+  color: #8a659c;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.botao-guardia {
+  background: #7c5a91;
+}
+
+.botao-jogar {
+  background: #4c8c73;
+}
+
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+.tela-guardia,
+.tela-jogador {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px;
+  background: linear-gradient(135deg, #f8f1e7, #e8eef5);
+}
+
+.card-guardia,
+.card-confirmacao,
+.card-jogador {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px 25px;
+  text-align: center;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  animation: aparecer 0.4s ease;
+}
+
+.card-guardia h1,
+.card-confirmacao h1,
+.card-jogador h1 {
+  font-size: 29px;
+  line-height: 1.25;
+}
+
+.icone {
+  font-size: 58px;
+  margin-bottom: 15px;
+}
+
+.campo {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+.campo input {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  background: #fff;
+  color: #333;
+}
+
+.campo input:focus {
+  border-color: #8a659c;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 10px 0 22px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: left;
+}
+
+legend {
+  padding: 0 7px;
+  font-weight: bold;
+}
+
+.opcoes-sexo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.opcao-sexo {
+  position: relative;
+  cursor: pointer;
+}
+
+.opcao-sexo input {
+  position: absolute;
+  opacity: 0;
+}
+
+.opcao-sexo span {
+  display: block;
+  padding: 13px 8px;
+  text-align: center;
+  border: 2px solid #e1d9e8;
+  border-radius: 10px;
+  background: #faf8fc;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.opcao-sexo input:checked + span {
+  background: #efe5f7;
+  border-color: #9b59b6;
+}
+
+.opcao-sexo input:focus-visible + span {
+  outline: 3px solid #7251a5;
+  outline-offset: 3px;
+}
+
+.botao-guardar {
+  background: #7c5a91;
+}
+
+.botao-voltar,
+.botao-inicio {
+  margin-top: 12px;
+  background: #666;
+}
+
+.mensagem-erro {
+  min-height: 22px;
+  margin-top: 15px;
+  color: #b3261e;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   CÓDIGO GERADO
+========================= */
+
+.codigo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 25px 0 20px;
+  padding: 22px 15px;
+  background: #f5eff9;
+  border: 2px dashed #a47cba;
+  border-radius: 15px;
+}
+
+.codigo-box span {
+  color: #666;
+  font-size: 14px;
+}
+
+.codigo-box strong {
+  font-size: 34px;
+  letter-spacing: 5px;
+  color: #75438b;
+  overflow-wrap: anywhere;
+}
+
+.botao-copiar {
+  background: #4c8c73;
+}
+
+.mensagem-copia {
+  min-height: 22px;
+  margin-top: 12px;
+  color: #347657;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   CAMPO DO JOGO
+========================= */
+
+.tela-jogo {
+  min-height: 100vh;
+  padding: 25px 15px 40px;
+  background: linear-gradient(135deg, #f8f1e7, #e8eef5);
+  color: #333;
+}
+
+.cabecalho-jogo {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+.icone-jogo {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.cabecalho-jogo h1 {
+  margin-bottom: 12px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.cabecalho-jogo p {
+  margin-top: 6px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.informacoes-jogo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.info {
+  padding: 15px 8px;
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+  font-size: 14px;
+}
+
+.info strong {
+  font-size: 24px;
+  color: #333;
+}
+
+.campo-jogo {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 14px;
+  background: #d6c7aa;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.quadrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 2px solid #b39b72;
+  border-radius: 12px;
+  background: #f5ead5;
+  font-size: clamp(19px, 4vw, 34px);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.quadrado:hover:not(:disabled) {
+  transform: scale(1.04);
+  background: #fff4df;
+}
+
+.quadrado:disabled {
+  cursor: default;
+}
+
+.quadrado-bebe {
+  background: #dff5e5;
+  border-color: #63b77c;
+  animation: aparecer 0.3s ease;
+}
+
+.quadrado-monstro {
+  background: #f7dede;
+  border-color: #d98282;
+  animation: aparecer 0.3s ease;
+}
+
+.mensagem-jogo {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 17px;
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.mensagem-jogo p {
+  color: #555;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.botao-reiniciar {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 15px auto;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #d9a441;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.botao-reiniciar:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TELA DE VITÓRIA
+========================= */
+
+.tela-vitoria {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(20, 25, 35, 0.92);
+}
+
+.conteudo-vitoria {
+  width: 100%;
+  max-width: 450px;
+  padding: 35px 25px;
+  text-align: center;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.5s ease;
+}
+
+.emoji-vitoria {
+  margin-bottom: 15px;
+  font-size: 62px;
+}
+
+.conteudo-vitoria h2 {
+  margin-bottom: 15px;
+  font-size: 29px;
+  line-height: 1.25;
+}
+
+.conteudo-vitoria p {
+  margin-bottom: 10px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.botao-revelacao {
+  width: 100%;
+  margin-top: 20px;
+  padding: 17px;
+  border: none;
+  border-radius: 12px;
+  background: #9b59b6;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.botao-revelacao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+
+/* =========================
+   REVELAÇÃO FINAL
+========================= */
+
+.tela-revelacao {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(20, 25, 35, 0.96);
+}
+
+.conteudo-revelacao {
+  width: 100%;
+  max-width: 500px;
+  padding: 35px 25px;
+  text-align: center;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  animation: aparecer 0.5s ease;
+}
+
+.contador {
+  color: #9b59b6;
+  font-size: 100px;
+  font-weight: bold;
+  animation: pulsar 1s infinite;
+}
+
+.resultado {
+  animation: aparecer 1s ease;
+}
+
+#confetes {
+  margin-bottom: 15px;
+  font-size: 27px;
+  line-height: 1.7;
+  animation: pulsar 1.5s infinite;
+}
+
+.emoji-bebe-revelacao {
+  margin-bottom: 20px;
+  font-size: 95px;
+}
+
+.resultado h2 {
+  margin-bottom: 20px;
+  font-size: clamp(30px, 7vw, 42px);
+  line-height: 1.2;
+}
+
+.resultado p {
+  color: #666;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.botao-inicio-revelacao {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #555;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.botao-inicio-revelacao:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+  .conteudo {
+    padding: 35px 22px;
+  }
+
+  .conteudo h1 {
+    font-size: 30px;
+  }
+
+  .icone-bebe {
+    font-size: 65px;
+  }
+
+  .card-guardia,
+  .card-confirmacao,
+  .card-jogador {
+    padding: 30px 20px;
+  }
+
+  .card-guardia h1,
+  .card-confirmacao h1,
+  .card-jogador h1 {
+    font-size: 25px;
+  }
+
+  .tela-jogo {
+    padding: 20px 10px 30px;
+  }
+
+  .cabecalho-jogo h1 {
+    font-size: 27px;
+  }
+
+  .icone-jogo {
+    font-size: 52px;
+  }
+
+  .campo-jogo {
+    gap: 6px;
+    padding: 8px;
+    border-radius: 15px;
+  }
+
+  .quadrado {
+    border-radius: 8px;
+    border-width: 2px;
+  }
+
+  .informacoes-jogo {
+    gap: 8px;
+  }
+
+  .info {
+    padding: 12px 5px;
+  }
+
+  .info span {
+    font-size: 12px;
+  }
+
+  .info strong {
+    font-size: 22px;
+  }
+
+  .conteudo-vitoria,
+  .conteudo-revelacao {
+    padding: 30px 20px;
+  }
+
+  .emoji-bebe-revelacao {
+    font-size: 80px;
+  }
+
+  .contador {
+    font-size: 85px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================
+   O GRANDE SEGREDO — TEMA MÁGICO
+   Camada visual adicional; preserva as classes e funções existentes.
+========================= */
+:root {
+  color: #30264a;
+  background: #100d2b;
+  --noite: #17133b;
+  --violeta: #7957d5;
+  --rosa-magico: #f3a6d6;
+  --azul-magico: #9bdcff;
+  --dourado: #ffe8a3;
+  --vidro: rgba(255, 255, 255, 0.88);
+}
+
+html { min-height: 100%; background: var(--noite); }
+body {
+  color: #30264a;
+  background-color: #17133b;
+  background-image: url('/magic-sky.svg'), radial-gradient(ellipse at 20% 0%, #493a82 0%, transparent 48%), linear-gradient(145deg, #17133b, #282052 55%, #172b51);
+  background-size: cover, cover, cover;
+  background-attachment: fixed;
+}
+
+.tela-inicial,
+.tela-guardia,
+.tela-jogador,
+.tela-jogo {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+}
+
+.tela-inicial::before,
+.tela-guardia::before,
+.tela-jogador::before,
+.tela-jogo::before {
+  content: "✦   ·      ✧         ·     ✦       ·        ✧";
+  position: absolute;
+  inset: 18px 0 auto;
+  z-index: -1;
+  color: rgba(255, 232, 163, .58);
+  font-size: clamp(15px, 2vw, 24px);
+  letter-spacing: clamp(10px, 4vw, 42px);
+  text-align: center;
+  pointer-events: none;
+  animation: estrelas-flutuam 7s ease-in-out infinite alternate;
+}
+
+.conteudo,
+.card-guardia,
+.card-confirmacao,
+.card-jogador {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .82);
+  border-radius: 30px;
+  background: linear-gradient(145deg, rgba(255,255,255,.96), rgba(246,240,255,.91));
+  box-shadow: 0 24px 70px rgba(5, 3, 28, .35), 0 0 0 7px rgba(255,255,255,.045), inset 0 1px 0 white;
+}
+
+.conteudo::before,
+.card-guardia::before,
+.card-confirmacao::before,
+.card-jogador::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -100px;
+  right: -70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(243,166,214,.34), transparent 70%);
+  pointer-events: none;
+}
+
+.icone-bebe,
+.icone,
+.icone-jogo {
+  filter: drop-shadow(0 7px 9px rgba(112, 76, 180, .2));
+  animation: flutuar 3.4s ease-in-out infinite;
+}
+
+.conteudo h1,
+.card-guardia h1,
+.card-confirmacao h1,
+.card-jogador h1,
+.cabecalho-jogo h1 {
+  color: #30264a;
+  letter-spacing: -.035em;
+}
+
+.subtitulo { color: #7957b7; }
+.descricao, .introducao { color: #6e6681; }
+
+.botao-guardia,
+.botao-guardar,
+.botao-revelacao {
+  background: linear-gradient(135deg, #9a6be2, #6949bd);
+  box-shadow: 0 8px 20px rgba(105, 73, 189, .28);
+}
+.botao-jogar,
+.botao-copiar {
+  background: linear-gradient(135deg, #52bfae, #287f8f);
+  box-shadow: 0 8px 20px rgba(40, 127, 143, .22);
+}
+.botao:hover,
+.botao-revelacao:hover,
+.botao-reiniciar:hover,
+.botao-inicio-revelacao:hover {
+  filter: brightness(1.08);
+  transform: translateY(-3px) scale(1.01);
+}
+
+.campo input {
+  border-color: #e2d8f2;
+  background: rgba(255,255,255,.9);
+  transition: border-color .2s, box-shadow .2s;
+}
+.campo input:focus {
+  border-color: #9a6be2;
+  box-shadow: 0 0 0 4px rgba(154,107,226,.13);
+  outline: none;
+}
+fieldset { border-color: #e6d9f5; }
+.opcao-sexo span { background: #fbf8ff; border-color: #e7ddf6; }
+.opcao-sexo input:checked + span {
+  background: linear-gradient(135deg, #f7e7ff, #e4f4ff);
+  border-color: #a47bda;
+  box-shadow: 0 4px 12px rgba(130, 89, 194, .12);
+}
+.codigo-box {
+  background: linear-gradient(135deg, #f6edff, #e9f7ff);
+  border-color: #b69add;
+}
+
+/* Tabuleiro encantado */
+.tela-jogo { padding-top: 28px; padding-bottom: 44px; }
+.cabecalho-jogo { margin-bottom: 22px; }
+.cabecalho-jogo h1 {
+  color: #fff8ff;
+  text-shadow: 0 3px 18px rgba(184, 148, 255, .36);
+  font-size: clamp(30px, 5vw, 42px);
+}
+.cabecalho-jogo p { color: rgba(246, 240, 255, .82); }
+.icone-jogo { font-size: 66px; filter: drop-shadow(0 0 18px rgba(255, 232, 163, .45)); }
+
+.info {
+  border: 1px solid rgba(255,255,255,.7);
+  background: rgba(255,255,255,.91);
+  border-radius: 19px;
+  box-shadow: 0 10px 28px rgba(7, 5, 35, .2), inset 0 1px 0 #fff;
+  backdrop-filter: blur(12px);
+}
+.info span { color: #766d8d; }
+.info strong { color: #4c3977; }
+
+.campo-jogo {
+  position: relative;
+  gap: clamp(6px, 1.5vw, 11px);
+  padding: clamp(10px, 2.2vw, 17px);
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 25px;
+  background: linear-gradient(145deg, rgba(101, 78, 161, .74), rgba(42, 54, 108, .88));
+  box-shadow: 0 20px 45px rgba(6, 4, 30, .34), inset 0 1px 0 rgba(255,255,255,.25);
+  backdrop-filter: blur(12px);
+}
+
+.quadrado {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: clamp(9px, 2vw, 16px);
+  color: #fff4c7;
+  background: linear-gradient(145deg, #8b76ce, #594a9d 60%, #3e4d91);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.32), inset 0 -5px 0 rgba(31, 24, 79, .18), 0 5px 12px rgba(9, 5, 42, .22);
+  font-size: clamp(23px, 4.5vw, 36px);
+  text-shadow: 0 2px 12px rgba(255, 232, 163, .45);
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+.quadrado::before {
+  content: "✧";
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  font-size: clamp(9px, 1.5vw, 14px);
+  color: rgba(255,255,255,.66);
+  pointer-events: none;
+}
+.quadrado:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.045) rotate(-1deg);
+  background: linear-gradient(145deg, #a993ed, #7060bd 60%, #4b63ad);
+  box-shadow: 0 10px 20px rgba(8, 5, 42, .32), 0 0 20px rgba(204, 176, 255, .28), inset 0 2px 0 rgba(255,255,255,.5);
+  filter: brightness(1.08);
+}
+.quadrado:active:not(:disabled) { transform: scale(.94); }
+.quadrado:disabled { opacity: 1; }
+.quadrado-bebe {
+  border-color: #fff2c2;
+  color: #fff;
+  background: radial-gradient(circle at 50% 25%, #fff3c2, #f2a9d9 48%, #9b78db 100%);
+  box-shadow: 0 0 0 2px rgba(255,239,180,.22), 0 0 28px rgba(255,218,245,.65), inset 0 2px 0 rgba(255,255,255,.75);
+  animation: bebe-descoberto .65s cubic-bezier(.2,1.4,.4,1) both;
+}
+.quadrado-monstro {
+  border-color: #d4c9ff;
+  background: radial-gradient(circle at 50% 20%, #8b719e, #514269 70%, #352d58);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.18), 0 0 18px rgba(138, 112, 181, .25);
+  animation: monstro-descoberto .45s ease both;
+}
+
+.mensagem-jogo {
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 18px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 12px 28px rgba(7,5,35,.2);
+  backdrop-filter: blur(10px);
+}
+.mensagem-jogo p { color: #51436f; }
+.botao-reiniciar {
+  border: 1px solid rgba(255,255,255,.35);
+  background: linear-gradient(135deg, #f2c56e, #d98b50);
+  box-shadow: 0 8px 22px rgba(10, 5, 34, .25);
+}
+
+/* Vitória e revelação: cartões luminosos sobre céu estrelado */
+.tela-vitoria,
+.tela-revelacao {
+  background: rgba(15, 10, 43, .82);
+  background-image: url('/magic-sky.svg'), radial-gradient(ellipse at 50% 30%, rgba(130, 91, 211, .45), transparent 65%);
+  background-size: cover, cover;
+  backdrop-filter: blur(10px);
+}
+.conteudo-vitoria,
+.conteudo-revelacao {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 30px;
+  background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(245,237,255,.95) 58%, rgba(231,247,255,.96));
+  box-shadow: 0 28px 90px rgba(0,0,0,.38), 0 0 0 8px rgba(255,255,255,.06), 0 0 45px rgba(194,157,255,.22);
+}
+.conteudo-vitoria::before,
+.conteudo-revelacao::before {
+  content: "✦";
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  color: #e5bd66;
+  font-size: 28px;
+  animation: brilho 2.4s ease-in-out infinite;
+}
+.emoji-vitoria { animation: flutuar 2.8s ease-in-out infinite; }
+.conteudo-vitoria h2 { color: #4a3675; }
+.conteudo-vitoria p { color: #746984; }
+.botao-revelacao {
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 16px;
+  padding: 18px;
+  background: linear-gradient(135deg, #a57be9, #7250c4 60%, #4c5ba8);
+  box-shadow: 0 10px 28px rgba(106, 76, 190, .32), inset 0 1px 0 rgba(255,255,255,.3);
+}
+.contador {
+  color: #7957d5;
+  text-shadow: 0 0 30px rgba(163, 126, 236, .45);
+  animation: contador-magico 1s ease-in-out infinite;
+}
+#confetes { filter: drop-shadow(0 4px 12px rgba(150, 95, 210, .22)); }
+.emoji-bebe-revelacao {
+  display: inline-block;
+  filter: drop-shadow(0 10px 16px rgba(125, 85, 185, .2));
+  animation: revelacao-bebe 1.1s cubic-bezier(.16,1.3,.3,1) both;
+}
+.resultado h2 {
+  color: #543b83;
+  text-shadow: 0 3px 20px rgba(167, 131, 230, .18);
+}
+.resultado p { color: #706480; }
+.botao-inicio-revelacao {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #6c5b99, #413b70);
+  box-shadow: 0 8px 20px rgba(49, 39, 93, .2);
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-7px) rotate(2deg); }
+}
+@keyframes estrelas-flutuam {
+  from { transform: translateY(0); opacity: .5; }
+  to { transform: translateY(9px); opacity: 1; }
+}
+@keyframes brilho {
+  0%, 100% { opacity: .55; transform: scale(.9) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.18) rotate(18deg); }
+}
+@keyframes bebe-descoberto {
+  0% { transform: scale(.75) rotate(-7deg); }
+  65% { transform: scale(1.13) rotate(3deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+@keyframes monstro-descoberto {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px) rotate(-2deg); }
+  75% { transform: translateX(4px) rotate(2deg); }
+}
+@keyframes contador-magico {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.12); filter: brightness(1.25); }
+}
+@keyframes revelacao-bebe {
+  0% { opacity: 0; transform: scale(.25) rotate(-18deg); }
+  65% { opacity: 1; transform: scale(1.18) rotate(5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@media (max-width: 600px) {
+  .cabecalho-jogo h1 { font-size: 29px; }
+  .campo-jogo { box-shadow: 0 14px 32px rgba(6,4,30,.3), inset 0 1px 0 rgba(255,255,255,.25); }
+  .quadrado { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .icone-bebe, .icone, .icone-jogo, .emoji-vitoria,
+  .conteudo-vitoria::before, .conteudo-revelacao::before {
+    animation: none !important;
+  }
+}
+
+/* Ilustrações próprias para os quadrados revelados e a tela final */
+.quadrado .imagem-descoberta {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  animation: imagem-aparece .38s cubic-bezier(.2, 1.35, .35, 1) both;
+}
+.quadrado-bebe { padding: 4px; }
+.quadrado-monstro { padding: 4px; }
+.quadrado .imagem-monstro { filter: saturate(.86); }
+.emoji-bebe-revelacao { display: flex; align-items: center; justify-content: center; }
+.imagem-revelacao {
+  display: block;
+  width: clamp(150px, 38vw, 245px);
+  max-width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 28px;
+  filter: drop-shadow(0 12px 25px rgba(15, 9, 54, .28));
+  animation: imagem-aparece .7s cubic-bezier(.2, 1.25, .35, 1) both;
+}
+@keyframes imagem-aparece {
+  from { opacity: 0; transform: scale(.55) rotate(-7deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .quadrado .imagem-descoberta, .imagem-revelacao { animation: none; }
+}
+
+
+/* Ilustrações fofas no início e na vitória, sem emojis */
+.mascotes-inicial, .ilustracao-vitoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2px, 1.5vw, 14px);
+}
+.mascotes-inicial { margin: 0 auto 18px; min-height: 145px; }
+.mascotes-inicial img {
+  display: block; width: clamp(105px, 19vw, 150px); height: clamp(105px, 19vw, 150px);
+  object-fit: contain; filter: drop-shadow(0 12px 18px rgba(111, 79, 173, .2));
+  animation: flutuar 3.4s ease-in-out infinite;
+}
+.mascotes-inicial img:nth-child(2) { animation-delay: -.9s; }
+.ilustracao-vitoria { margin: 0 auto 18px; }
+.ilustracao-vitoria img {
+  display: block; width: clamp(105px, 21vw, 155px); height: clamp(105px, 21vw, 155px);
+  object-fit: contain; filter: drop-shadow(0 10px 20px rgba(111, 79, 173, .22));
+}
+.ilustracao-vitoria img:nth-child(2) { animation: flutuar 3s ease-in-out -.8s infinite; }
+@media (max-width: 420px) {
+  .mascotes-inicial { min-height: 112px; }
+  .mascotes-inicial img { width: 112px; height: 112px; }
+  .ilustracao-vitoria img { width: 112px; height: 112px; }
+}
+
+/* Controles de música e efeitos sonoros */
+.painel-audio {
+  width: min(100% - 24px, 720px);
+  margin: 0 auto 18px;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #f8f0ff;
+  background: rgba(27, 20, 69, .76);
+  border: 1px solid rgba(228, 204, 255, .45);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 8, 48, .2), inset 0 1px 0 rgba(255,255,255,.12);
+  backdrop-filter: blur(12px);
+}
+.painel-audio button {
+  padding: 8px 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #8464c7, #554a9b);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: transform .18s ease, filter .18s ease;
+}
+.painel-audio button:hover { transform: translateY(-1px); filter: brightness(1.12); }
+.painel-audio button[aria-pressed="false"] { opacity: .72; background: #514b67; }
+.painel-audio label { font-size: 13px; color: #e8dcff; }
+.painel-audio input[type="range"] { width: 100px; accent-color: #e6b4ff; cursor: pointer; }
+@media (max-width: 480px) {
+  .painel-audio { gap: 8px; padding: 10px; }
+  .painel-audio button { font-size: 12px; padding: 8px 10px; }
+  .painel-audio label { width: 100%; text-align: center; }
+}

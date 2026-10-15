@@ -1,0 +1,122 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardiã do Segredo</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <main class="tela-guardia">
+    <section class="card-guardia" id="cardGuardia">
+      <div class="icone">🔐</div>
+
+      <h1>Guardiã do Segredo</h1>
+
+      <p class="introducao">
+        Você recebeu uma missão muito importante.
+      </p>
+
+      <p class="descricao">
+        Guarde o segredo com cuidado até o momento da grande revelação.
+      </p>
+
+      <form id="formGuardia">
+        <div class="campo">
+          <label for="nomeMae">👩 Nome da mamãe</label>
+          <input
+            type="text"
+            id="nomeMae"
+            placeholder="Digite o nome da mamãe"
+            required
+          >
+        </div>
+
+        <div class="campo">
+          <label for="nomePai">👨 Nome do papai</label>
+          <input
+            type="text"
+            id="nomePai"
+            placeholder="Digite o nome do papai"
+            required
+          >
+        </div>
+
+        <div class="campo">
+          <label for="nomeBebe">👶 Nome do bebê</label>
+          <input
+            type="text"
+            id="nomeBebe"
+            placeholder="Opcional"
+          >
+        </div>
+
+        <fieldset>
+          <legend>Qual é o segredo?</legend>
+
+          <div class="opcoes-sexo">
+            <label class="opcao-sexo">
+              <input
+                type="radio"
+                name="sexo"
+                value="menino"
+                required
+              >
+              <span>👦 Menino</span>
+            </label>
+
+            <label class="opcao-sexo">
+              <input
+                type="radio"
+                name="sexo"
+                value="menina"
+              >
+              <span>👧 Menina</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="botao botao-guardar">
+          🔐 Guardar o Segredo
+        </button>
+      </form>
+    </section>
+
+    <section class="card-confirmacao" id="cardConfirmacao" hidden>
+      <div class="icone">🎉</div>
+
+      <h1>Segredo guardado!</h1>
+
+      <p class="descricao">
+        Agora entregue este código aos papais.
+      </p>
+
+      <div class="codigo-box">
+        <span>🎟️ Código do jogo</span>
+        <strong id="codigoGerado"></strong>
+      </div>
+
+      <button
+        type="button"
+        id="btnCopiar"
+        class="botao botao-copiar"
+      >
+        📋 Copiar código
+      </button>
+
+      <button
+        type="button"
+        id="btnInicio"
+        class="botao botao-inicio"
+      >
+        🏠 Voltar ao início
+      </button>
+
+      <p id="mensagemCopia" class="mensagem-copia" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script type="module" src="/src/js/guardia.js"></script>
+</body>
+</html>

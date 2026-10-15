@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quero Jogar</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <main class="tela-jogador">
+    <section class="card-jogador">
+      <div class="icone">🎮</div>
+
+      <h1>Quero Jogar</h1>
+
+      <p class="introducao">
+        A aventura está esperando por vocês!
+      </p>
+
+      <p class="descricao">
+        Digite o código recebido da Guardiã do Segredo para começar.
+      </p>
+
+      <form id="formJogador">
+        <div class="campo">
+          <label for="codigo">🔐 Código da aventura</label>
+
+          <input
+            type="text"
+            id="codigo"
+            placeholder="Ex.: A7K29P"
+            maxlength="6"
+            minlength="6"
+            pattern="[A-Za-z0-9]{6}"
+            autocomplete="off"
+            autocapitalize="characters"
+            required
+          >
+        </div>
+
+        <button type="submit" class="botao botao-jogar">
+          🚀 Começar aventura
+        </button>
+      </form>
+
+      <p id="mensagemErro" class="mensagem-erro" aria-live="polite"></p>
+
+      <button
+        type="button"
+        id="btnVoltar"
+        class="botao botao-voltar"
+      >
+        🏠 Voltar
+      </button>
+    </section>
+  </main>
+
+  <script type="module" src="/src/js/jogador.js"></script>
+</body>
+</html>
