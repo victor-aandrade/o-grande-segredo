@@ -10,6 +10,7 @@ export default defineConfig({
         guardia: resolve(process.cwd(), "guardia.html"),
         jogador: resolve(process.cwd(), "jogador.html"),
         jogo: resolve(process.cwd(), "jogo.html"),
+        privacidade: resolve(process.cwd(), "privacidade.html"),
       },
     },
   },
