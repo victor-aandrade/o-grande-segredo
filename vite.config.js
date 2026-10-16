@@ -11,6 +11,7 @@ export default defineConfig({
         jogador: resolve(process.cwd(), "jogador.html"),
         jogo: resolve(process.cwd(), "jogo.html"),
         privacidade: resolve(process.cwd(), "privacidade.html"),
+        comoFunciona: resolve(process.cwd(), "como-funciona.html"),
       },
     },
   },
